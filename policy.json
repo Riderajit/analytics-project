@@ -1,12 +1,15 @@
 {
-    "Version": "2012-10-17",
+    "Version": "2008-10-17",
+    "Id": "PolicyForCloudFrontPrivateContent",
     "Statement": [
         {
-            "Sid": "PublicReadGetObject",
+            "Sid": "1",
             "Effect": "Allow",
-            "Principal": "*",
+            "Principal": {
+                "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3DU3OP4PIGS36"
+            },
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::analytics-project/*"
+            "Resource": "arn:aws:s3:::2testingcicd/*"
         }
     ]
 }
